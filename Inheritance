@@ -14,10 +14,10 @@ class Demo11{
 
         }
 
-        static void fun(){
+         void fun(int x){
 
 
-                //System.out.println(x);
+                System.out.println(x);
                 System.out.println(this.x);
         }
 
