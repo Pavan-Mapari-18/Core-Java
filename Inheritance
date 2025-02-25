@@ -1,1 +1,33 @@
 
+// this keyword
+
+class Demo11{
+
+
+        int x;
+
+        Demo11(int x){
+
+         this.x = x;
+         System.out.println("In  Constructors.");
+
+
+        }
+
+        static void fun(){
+
+
+                //System.out.println(x);
+                System.out.println(this.x);
+        }
+
+        public static void main(String [] args){
+
+
+                Demo11 d1 = new Demo11(120);
+                Demo11 d2 = new Demo11(150);
+
+                d1.fun(50);
+                d2.fun(60);
+        }
+}
