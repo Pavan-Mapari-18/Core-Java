@@ -1,1 +1,103 @@
+-----------  Parent p = new Child(); -------------Ex.Below------------       //  Parent class reffrence and child class Objects.
 
+/*
+**working Scenario:
+                   Child c = new Child();
+                   Parent c = new Parent();
+                   Parent c= new Child();
+
+***Not working:
+                Child c = new Parent();     //error: incompatible types: Parent cannot be converted to Child
+
+*/
+
+class Parent{
+
+        void fun(){
+
+                System.out.println("In fun-parent-methods");
+        }
+
+        void run(){
+
+                System.out.println("In run-Parent methods");
+        }
+
+        void gun(){
+
+                System.out.println("In gun - parent method");
+        }
+
+}class Child extends Parent{
+
+        void run(){
+
+                System.out.println("IN run-child-method");
+        }
+
+        void fun(){
+
+                System.out.println("In fun-child-methods");
+        }
+}
+
+class Client{
+
+        public static void main(String[] args){
+
+                Parent p = new Child();        //  Parent class reffrence and child class Objects.
+
+                p.fun();
+                p.run();
+        }
+}
+
+/---------------------------------------- Parent cannot be converted to Child  --------- Child p = new Parent();----------------------------------------------------------------------------------
+
+class Parent{
+
+        void fun(){
+
+                System.out.println("In fun-parent-methods");
+        }
+
+        void run(){
+
+                System.out.println("In run-Parent methods");
+        }
+
+        void gun(){
+
+                System.out.println("In gun - parent method");
+        }
+
+}
+
+class Child extends Parent{
+
+        void run(){
+
+                System.out.println("IN run-child-method");
+        }
+
+        void fun(){
+
+                System.out.println("In fun-child-methods");
+        }
+}
+
+class Client{
+
+        public static void main(String[] args){
+
+                Child p = new Parent();  // error: incompatible types: Parent cannot be converted to Child
+
+                p.fun();
+                p.run();
+
+                p.gun();
+        }
+}
+
+
+                                                                                                                                                                                       ~                          
