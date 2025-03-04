@@ -1,0 +1,39 @@
+Code 1:
+
+abstract class Parent{
+
+        void career(){
+
+                System.out.println("Software Engineer");
+        }
+
+        void marry(){
+
+                System.out.println("Parent-Pooja");
+        }
+
+}
+class Child extends Parent{
+
+
+        void marry(){
+
+                System.out.println("RakulPreet");
+        }
+
+
+        public static void main(String[] args){
+
+                Child obj = new Child(); // create a object of Child and class is Parent
+                obj.career();
+                obj.marry();  //RakulPreet bcs method is override in child class.
+        }
+}
+
+OutPut:-
+
+Software Engineer
+RakulPreet
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
