@@ -1,1 +1,54 @@
 
+class OrderDelayedExcpetion extends Exception{
+
+        OrderDelayedExcpetion(String str){
+
+                super(str);
+        }
+}
+
+class Zomato{
+
+        boolean rainStatus=true;
+
+        boolean rainCheck()
+        {
+          if(rainStatus == true){
+
+                  return rainStatus;
+          }
+          else{
+
+                  return rainStatus;
+          }
+
+        }
+
+        void order(String food) throws OrderDelayedExcpetion{
+
+
+                boolean val= rainCheck();
+
+                if(val==true){
+
+                        throw new OrderDelayedExcpetion("Order cancelled due to heavy rainfall");
+                }
+
+                System.out.println("Your order is preparing " + food);
+        }
+}
+
+class User{
+
+        public static void main(String[] args){
+
+                Zomato obj = new Zomato();
+                try{
+                obj.order("Biryani");
+                }
+                catch(OrderDelayedExcpetion ode){
+
+                        System.out.println(ode.getMessage());
+                }
+        }
+}
