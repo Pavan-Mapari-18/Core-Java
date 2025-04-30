@@ -5,7 +5,7 @@ Collections:
    - Homogeneous objects
    - problem for grow
    - No predefined methods.
-   - Allow duplicates
+   
    To overcome such problem java introduced collection.
 
 * Collection in java is the framework that provide an architecture to store and manipulate the group of objects.
@@ -21,8 +21,43 @@ Collections:
   8. Navigable Set
   9. Navigable Map
   10. Iterable
-
+-------------------------------------------
 1. List Interface:
+---------------------
       - Duplicate data allowed
       - Insertion order preserved
       - List interface is the part of java.util package and extends the Collection Framework.
+
+    Methods of List Interface():
+         add();  isEmpty();  remove();  size(); clear();
+
+   * ArrayList() Methods:
+         - Dynamic Sizing
+         - Generic resizing
+         - Automatic resizing
+         - Iterable
+         - Null values
+         - Random Access
+  * LinkedList methods():
+     - LinkedList is a class that implements the List interface and represent a linked list data structure. Linked list implements doubly linked list.
+     - Each node in a linked list repesent as a node contaning both data and refrence to the next and previous nodes
+
+  * Vector
+
+
+* for-each-loop:
+         The for-each loop also known as the enhanced for loop it is use for iterating over elements in a collecction or array.
+   Example:
+
+-----------------------
+2. Set Interface:
+----------------
+      - set is an interface in java collection framework that represents a collection of unique objects.
+      - set does not allow duplicates entry.
+      - order of elements is not preserved.
+   
+*Implementations:
+            - HashSet: 
+            - LinkedHashSet
+            - TreeSet
+
