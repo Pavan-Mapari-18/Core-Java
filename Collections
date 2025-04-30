@@ -1,0 +1,28 @@
+Collections:
+
+   An array has the drawbacks like:
+   - fixed sized
+   - Homogeneous objects
+   - problem for grow
+   - No predefined methods.
+   - Allow duplicates
+   To overcome such problem java introduced collection.
+
+* Collection in java is the framework that provide an architecture to store and manipulate the group of objects.
+
+* In Java collection there are 10 important interface:
+  1. Collection
+  2. List
+  3. Set
+  4. Sorted Set
+  5. Queue
+  6. Map
+  7. Sorted Map
+  8. Navigable Set
+  9. Navigable Map
+  10. Iterable
+
+1. List Interface:
+      - Duplicate data allowed
+      - Insertion order preserved
+      - List interface is the part of java.util package and extends the Collection Framework.
