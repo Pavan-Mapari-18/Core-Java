@@ -1,0 +1,141 @@
+🔥 Top Java 8 Interview Questions and Answers
+1. What are the main features introduced in Java 8?
+
+    Lambda Expressions
+
+    Functional Interfaces
+
+    Streams API
+
+    Default and Static Methods in Interfaces
+
+    Method References
+
+    Optional Class
+
+    New Date and Time API (java.time)
+
+    Collectors, Predicate, Function, etc.
+
+2. What is a Lambda Expression?
+
+    A concise way to represent an anonymous function.
+
+        (List<String> list) -> list.isEmpty();
+
+3. What is a Functional Interface?
+
+    An interface with only one abstract method.
+
+    Can have multiple default or static methods.
+
+     @FunctionalInterface
+     interface MyFunc {
+         void execute();
+      }
+
+4. What is the Stream API?
+
+    A powerful tool to process collections of objects in a functional style (map, filter, reduce).
+
+    list.stream().filter(s -> s.startsWith("A")).collect(Collectors.toList());
+
+5. What is the difference between map() and flatMap() in streams?
+
+    map() transforms elements.
+
+    flatMap() flattens nested structures.
+
+    map -> Stream<Stream<T>>  
+    flatMap -> Stream<T>
+
+6.What are Default Methods in interfaces?
+
+    Methods with a body in interfaces using the default keyword.
+
+  default void log() {
+      System.out.println("Logging...");
+  }
+
+7. What is the Optional class?
+
+    A container that may or may not contain a non-null value, used to avoid NullPointerException.
+
+    Optional<String> opt = Optional.of("Hello");
+
+8. How does filter() work in streams?
+
+    It returns a stream with elements that match a given predicate.
+
+    list.stream().filter(x -> x > 5).collect(Collectors.toList());
+
+9. What are Method References?
+
+    A shorthand for calling a method via a lambda expression.
+
+    list.forEach(System.out::println);
+
+10. What are Collectors in Java 8?
+
+    Utilities to collect stream results into different forms like list, set, map, etc.
+
+    list.stream().collect(Collectors.toSet());
+
+11. How do you use reduce() in Java 8 Streams?
+
+reduce() is used to aggregate values, such as summing or multiplying.
+
+✅ Example:
+
+List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);
+int sum = nums.stream().reduce(0, (a, b) -> a + b);
+System.out.println(sum); // 15
+
+12. What is the difference between findFirst() and findAny()?
+
+    findFirst() returns the first element in stream order.
+
+    findAny() returns any element (faster in parallel streams).
+
+✅ Example:
+
+Optional<String> first = list.stream().findFirst();
+Optional<String> any = list.parallelStream().findAny();
+
+14. How do you group elements using Collectors.groupingBy()?
+
+✅ Example:
+
+List<String> items = Arrays.asList("apple", "banana", "apple", "orange");
+Map<String, Long> result = items.stream()
+    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+System.out.println(result);
+// Output: {banana=1, orange=1, apple=2}
+
+15. How can you filter and collect elements in one go?
+
+✅ Example:
+
+List<String> names = Arrays.asList("Alice", "Bob", "Alex", "John");
+List<String> filtered = names.stream()
+    .filter(name -> name.startsWith("A"))
+    .collect(Collectors.toList());
+
+System.out.println(filtered); // [Alice, Alex]
+
+18. What are Predicate, Function, and Consumer interfaces?
+Interface	Purpose
+Predicate	Takes input and returns boolean
+Function	Takes input and returns a result
+Consumer	Takes input and returns nothing
+✅ Example:
+Predicate<String> startsWithA = s -> s.startsWith("A");
+Function<String, Integer> length = s -> s.length();
+Consumer<String> print = s -> System.out.println(s);
+
+20. What's the difference between peek() and map()?
+
+    map() transforms elements.
+
+    peek() is mainly for debugging (does not modify stream content).
