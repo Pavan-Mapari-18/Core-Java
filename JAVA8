@@ -139,3 +139,10 @@ Consumer<String> print = s -> System.out.println(s);
     map() transforms elements.
 
     peek() is mainly for debugging (does not modify stream content).
+
+21. What is the use of collect() in Stream?
+ => collect() is a terminal operation that transforms the elements of a stream into a collection or a single value using a Collector.
+
+22.  What are Collectors?
+
+Collectors are used to convert stream results into List, Set, Map, or join strings.
