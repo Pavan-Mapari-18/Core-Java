@@ -1,33 +1,159 @@
-
-// this keyword
-
-class Demo11{
+* If a class does not extends any class then there is a class which is the default parent class of that class. and that is Object class.
 
 
-        int x;
+class Parent extends Object{
 
-        Demo11(int x){
+        int x =10;
 
-         this.x = x;
-         System.out.println("In  Constructors.");
+        void fun(){
 
-
+                System.out.println("In fun");
         }
 
-         void fun(int x){
+}
+
+class Child extends Parent{
 
 
-                System.out.println(x);
-                System.out.println(this.x);
-        }
+}
+class main{
 
-        public static void main(String [] args){
+   public static void main(String[] args){
 
+           Parent obj = new Parent(); // Here we are created a parent class object and accessing the methods of Child class.
+           System.out.println(obj.x);
+           obj.fun();
+   }
 
-                Demo11 d1 = new Demo11(120);
-                Demo11 d2 = new Demo11(150);
+}
 
-                d1.fun(50);
-                d2.fun(60);
+//---------------------------------------------------------------------------------------------------------------
+
+class Parent1{
+
+        int x=10;
+        void fun(){
+
+                System.out.println("In parent fun methods");
         }
 }
+
+class Child1 extends Parent1{
+
+}
+
+class Main1{
+
+        public static void main(String[] args){
+
+                Child1 obj11= new Child1();  Here we are created a Child class object and accessing the methods of Parent class.
+                System.out.println(obj11.x);
+                obj11.fun();
+                                                                                                                                                                                                                        }
+}
+
+//---------------------------------------------------------------------------------------------------------------
+
+
+ class Parent2 extends Object{
+
+         int x=20;
+
+          Parent2(){
+
+                 System.out.println("In parent class Constructors");
+         }
+ }
+
+class Child2 extends Parent2{
+
+        int y=20;
+
+        Child2(){
+
+                System.out.println("in child class coo=nstructors");
+        }
+
+}
+class Main3{
+
+        public static void main(String[] args){
+
+                Child2 obj = new Child2();
+
+                System.out.println(obj.x); // 20
+
+                System.out.println(obj.y); //20
+
+                System.out.println("In end Main");
+        }
+
+}
+
+//-----------------------------Types Of Inheritance In java----------------------------------------------------------------------------------
+
+1. Single level
+2. Multi level
+3. Multiple (not suppoerted using class)
+4. Hierarchical 
+5. Hybrid Inheritance
+
+--------------------------
+1. Single level Inheritance:
+
+class Parent extends Object{
+
+}
+-------------------------------
+2. Multi level Inheritance:
+ Here Incubators extends Core2web class and core2web is Parent class of core2web is Object class so this is multi levele ineritance
+class Core2web {
+
+}
+class Incubators extends Core2web{
+
+}
+-------------------------
+3. Multiple Inheritance:
+
+class Parent1 extends Object{
+    Parent1(){
+                System.out.println("In Parent class Constructors");   
+            }
+}
+
+class Parent2 extends Object{
+
+         Parent2(){
+                System.out.println("In Parent2 class constructors");
+         }
+}
+class Child extends Parent1,Parent2{
+
+ Child(){
+   System.out.println("Child class Constructors");
+ }
+}
+
+Q. Multiple Inheritance in not allowed in java using class?
+Ans:
+    To avoid the ambiguity in methods calling Java does not support multiple inehritance.
+
+ In Java Multiple inheritance is supported but Interface.
+
+//---------------------------------------------------------------------------------------------------------------
+
+*---------------------------Super Keyword in java-----------------------------
+
+1. To access the parents class things from child class we need a one keywords called super().
+
+2. we need super keyword when the parent class and child class has same variable name
+
+3. super keyword is considerd as an instance variable.
+
+4. Inside constructor super must be in first line
+
+5. when we have to call the methods of parent class having name in child class using super, the super mustbe used inside the object only.
+
+
+
